@@ -24,7 +24,7 @@ public class InstitutionController {
 	@RequestMapping(value = "/")
 	@GetMapping
 	@ApiOperation(value="Get institution list",notes="Returns list of institution")
-	public List<instDTO> getInstutions() {
+	public List<InstDTO> getInstutions() {
 		return instService.getInsts();
 	}
 
@@ -32,7 +32,7 @@ public class InstitutionController {
 	@RequestMapping(path = "/", method = RequestMethod.POST)
 	@ResponseStatus(HttpStatus.CREATED)
 	@ApiOperation(value="Create users",notes="Creates user from string")
-	public void createInstituion(@ApiParam(value="User Data",required=true) @Valid @RequestBody final instDTO inst ) {
+	public void createInstituion(@ApiParam(value="User Data",required=true) @Valid @RequestBody final InstDTO inst ) {
 		instService.createInstituton(inst);
 	}
 //

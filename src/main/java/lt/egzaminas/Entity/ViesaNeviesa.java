@@ -8,13 +8,13 @@ import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
 public abstract class ViesaNeviesa extends Institucija {
-	private boolean viesumas;
+	private String viesumas;
 
-	public boolean isViesumas() {
+	public String getViesumas() {
 		return viesumas;
 	}
 
-	public void setViesumas(boolean viesumas) {
+	public void setViesumas(String viesumas) {
 		this.viesumas = viesumas;
 	}
 	
